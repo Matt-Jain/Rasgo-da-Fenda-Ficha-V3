@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rasgo da Fenda — Aegis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="login-screen" class="screen">
+  <div class="login-card">
+    <h1>FICHA DE PERSONAGEM</h1>
+    <h2>RASGO DA FENDA</h2>
+    <p>Aegis — O Despertar</p>
+
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Senha" />
+
+    <button onclick="login()">Entrar / Cadastrar</button>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+
+  <header>
+    <h1>Rasgo da Fenda</h1>
+    <nav>
+      <button onclick="showTab('create')">Criar Personagem</button>
+      <button onclick="showTab('characters')">Personagens</button>
+      <button onclick="showTab('dice')">Dados</button>
+      <button onclick="logout()">Sair</button>
+    </nav>
+  </header>
+
+  <!-- CRIAR PERSONAGEM -->
+  <section id="create" class="tab">
+    <div class="paper">
+      <h2>Identidade</h2>
+
+      <div class="row">
+        <input id="charName" placeholder="Nome do Personagem" />
+        <input id="playerName" placeholder="Nome do Jogador" />
+      </div>
+
+      <textarea id="appearance" placeholder="Aparência (obrigatório)"></textarea>
+      <textarea id="history" placeholder="História"></textarea>
+      <textarea id="goals" placeholder="Ambições"></textarea>
+
+      <h3>Perícias</h3>
+      <p>Pontos totais: <span id="points">200</span></p>
+
+      <div id="skills"></div>
+
+      <button onclick="saveCharacter()">Salvar Personagem</button>
+    </div>
+  </section>
+
+  <!-- PERSONAGENS -->
+  <section id="characters" class="tab hidden">
+    <div class="paper">
+      <h2>Personagens</h2>
+      <div id="characterList"></div>
+    </div>
+  </section>
+
+  <!-- DADOS -->
+  <section id="dice" class="tab hidden">
+    <div class="paper">
+      <h2>Rolagem de Dados</h2>
+
+      <select id="diceCharacter" onchange="loadDiceSkills()"></select>
+
+      <div id="diceSkills"></div>
+
+      <div id="diceResult" class="dice-panel hidden">
+        <div id="diceNumber">--</div>
+        <div id="diceText"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

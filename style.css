@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #0f1115, #1b1e25);
+  color: #eaeaea;
+}
+
+.hidden {
+  display: none;
+}
+
+.screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: #1f222b;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.login-card button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+header {
+  padding: 10px;
+  background: #14161c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  margin-left: 5px;
+}
+
+.paper {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #f2f2e9;
+  color: #222;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.paper h2 {
+  margin-top: 0;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+}
+
+#skills, #diceSkills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.skill {
+  background: #ddd;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.skill input {
+  width: 60px;
+}
+
+.character-card {
+  background: #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.bars {
+  display: flex;
+  gap: 10px;
+}
+
+.bar {
+  flex: 1;
+  text-align: center;
+}
+
+.bar.life { color: red; }
+.bar.sanity { color: goldenrod; }
+.bar.control { color: #0044aa; }
+
+.dice-panel {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+}
+
+#diceNumber {
+  font-size: 64px;
+}
